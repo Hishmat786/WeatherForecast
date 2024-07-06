@@ -1,8 +1,9 @@
-body {
+.body {
     background-image: url('Assests/bg.jpg');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: scroll; /* Keeps the background fixed during scroll */
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
-

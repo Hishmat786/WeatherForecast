@@ -1,9 +1,6 @@
-.body {
-    background-image: url('Assests/bg.jpg');
-    background-color: #cccccc;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+#search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem
 }

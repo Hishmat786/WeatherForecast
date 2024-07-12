@@ -1,97 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather Forecast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    
     <div class="container">
-        <div class="info">
-            <div class="dateContainer">
-                <div class="time" id="time">
-                    12:00 <span id="am">AM</span>
-                </div>
-                <div class="date">
-                    Monday, 8 July
-                </div>
-                <div class="report" id="currentReport">
-                    <div class="weather_item">
-                        <div>Humidity:</div>
-                        <div >60</div>
-                    </div>
-                    <div class="weather_item">
-                        <div>Pressure:</div>
-                        <div >60</div>
-                    </div>
-                    <div class="weather_item">
-                        <div>Wind Speed:</div>
-                        <div >60</div>
-                    </div>
-                </div>
-    
-            </div>
-            <div class="place">
-                <div class="timeZone" id="timeZone">Mithi</div>
-                <div class="country" id="country">PK</div>
-            </div>
-        </div>    
-    </div>
-
-    <div class="forecast">
-        <div class="today" id="current">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-            <div class="other">
-                <div class="day">Monday</div>
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
+        <h1 class="text-center">Weather Dashboard</h1>
+        <div class="search-bar text-center">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-button">Search</button>
         </div>
-        <div class="weatherForecast" id="weatherForecast">
-            <div class="wfi">
-                <div class="day">Tue</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
-            <div class="wfi">
-                <div class="day">Wed</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
-            <div class="wfi">
-                <div class="day">Thu</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
-            <div class="wfi">
-                <div class="day">Fri</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
-            <div class="wfi">
-                <div class="day">Sat</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
-            <div class="wfi">
-                <div class="day">Sun</div>
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="wicon" class="w_icon">
-                <div class="temp">Night - 32.3&#176 C</div>
-                <div class="temp">Day- 42.3&#176</div>
-            </div>
+        <div id="current-weather" class="weather-section">
+            <!-- Current weather details will be inserted here -->
         </div>
     </div>
-    
-
+    <div id="forecast" class="fiveday">
+        <!-- 5-day forecast details will be inserted here -->
+    </div>
     <script src="script.js"></script>
 </body>
-
 </html>

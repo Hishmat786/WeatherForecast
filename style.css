@@ -8,10 +8,12 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
-h2{
-    margin: 20px;
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
 }
-
 .container {
     margin-top: 50px;
 }
@@ -32,10 +34,6 @@ h2{
     border: 1px solid #ccc;
     background-color: #fff;
     cursor: pointer;
-}
-
-.weather-section {
-    margin-top: 20px;
 }
 
 .weather-card {
@@ -68,7 +66,7 @@ h2{
     flex-direction: row;
     position: fixed;
     overflow-y: hidden;
-    margin: 5px;
+    margin-left: 140px;
 }
 
 @media  only screen and  (max-width:730px) {

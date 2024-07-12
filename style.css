@@ -57,9 +57,50 @@ body{
 .info .report{
     display: flex;
     flex-direction: column;
+    background: rgba(24,24,27,0.4);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 10px 0;
+    border: 1px solid white;
 }
 
 .info .report .weather_item{
     display: flex;
     justify-content: space-between;
+}
+
+.forecast{
+    background: rgba(24,24,27,0.6);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.forecast .today .day{
+    padding: 5px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+
+.forecast .weatherForecast{
+    display: flex;
 }

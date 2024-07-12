@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background-color: #a6afb8;
     background-image: url("D:/Web3gle/WeatherForecast/Assests/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+}
+h2{
+    margin: 20px;
 }
 
 .container {
@@ -15,6 +18,20 @@ body {
 
 .search-bar {
     margin-bottom: 20px;
+}
+
+.search-bar input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 .weather-section {
@@ -28,7 +45,17 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    background-color: #fff;
+    background-color: #a19696a6;
+}
+.weather{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #a19696a6;
 }
 
 .weather-icon {
@@ -38,6 +65,16 @@ body {
 
 .fiveday{
     display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
+    flex-direction: row;
+    position: fixed;
+    overflow-y: hidden;
+    margin: 5px;
+}
+
+@media  only screen and  (max-width:730px) {
+    .fiveday{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
 }

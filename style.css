@@ -7,6 +7,9 @@ body {
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
+.name{
+    font-size: large;
+}
 #toggleButton {
     border-radius: 10px;
 }
@@ -17,7 +20,7 @@ body {
     margin-top: 10px;
 }
 .container {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .search-bar {
@@ -36,6 +39,12 @@ body {
     border: 1px solid #ccc;
     background-color: #fff;
     cursor: pointer;
+}
+
+.temp{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
 }
 
 .weather-card {

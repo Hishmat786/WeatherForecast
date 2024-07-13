@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: #a6afb8;
     background-image: url("D:/Web3gle/WeatherForecast/Assests/bg.jpg");
     background-repeat: no-repeat;
@@ -7,6 +6,9 @@ body {
     overflow: hidden;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
+}
+#toggleButton {
+    border-radius: 10px;
 }
 .nav{
     display: flex;

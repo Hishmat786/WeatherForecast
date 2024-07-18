@@ -4,7 +4,7 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/";
 let isCelsius = true;
 let currentTempCelsius = 0;
 let forecastList={}
-let d =0;
+let d =5;
 document.getElementById("search-button").addEventListener("click", () => {
     const city = document.getElementById("city-input").value;
     if (city) {
@@ -39,10 +39,10 @@ function displayCurrentWeather(data) {
         <div class="weather-card">
             <div class="name">
                 <h2>${data.name}</h2>
-                <p>${new Date().toLocaleDateString()}</p>
+                <p>${new Date().toDateString()}</p>
+                <img class="weather-icon" src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather icon">
             </div>
             <div class="temp">
-                <img class="weather-icon" src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather icon">
                 <p id='temperature'>Temperature: ${currentTempCelsius}°C</p>
                 <p>Humidity: ${data.main.humidity}%</p>
                 <p>Wind Speed: ${data.wind.speed} m/s</p>
@@ -60,13 +60,14 @@ function displayForecast(data) {
     forecastList = data.list.filter((item) =>
         item.dt_txt.includes("12:00:00")
     );
-    console.log(forecastList)
+    // console.log(forecastList)
+    forecastDiv.innerHTML=""
     forecastList.forEach((day) => {
-        if(d!=5){
+    //    if(d>=5 && d<10){
             forecastDiv.innerHTML += `
                 <div class="weather">
                     <div class="data">
-                    <p>${new Date(day.dt_txt).toLocaleDateString()}</p>
+                    <p>${new Date(day.dt_txt).toDateString()}</p>
                     <p>High Temp: ${day.main.temp_max}°C</p>
                     <p>Low Temp: ${day.main.temp_min}°C</p>
                     <p>${day.weather[0].description}</p>
@@ -76,7 +77,7 @@ function displayForecast(data) {
                 </div>
             `;
             d++;
-        }
+    // }
     });
 }
 
